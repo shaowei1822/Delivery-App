@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+ <body ng-app="deliveryapp">
+ 
+ <ion-side-menus>
+
+    <!-- Center content -->
+    <ion-side-menu-content>
+      <ion-header-bar class="bar bar-header bar-assertive">
+        <div class="button-bar">
+          <a class="button" href="Blog.html">Blog</a>
+          <a class="button" href="contactus.html">Contact Us</a>
+          <a class="button" href="index.html">Home</a>
+          <a class="button" href="BeADriver.html">Be a Driver</a>
+          <a class="button" href="BookADelivery.html">Book A Delivery</a>
+        </div>
+      </ion-header-bar>
+      <ion-content>
+       <div class="row">
+          <div class="col">
+           <!-- http://embedgooglemaps.com/en/ around 500 width 500 height -->
+            <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:500px;width:650px;'><div id='gmap_canvas' style='height:500px;width:650px;'></div><div><small><a href="http://www.embedgooglemaps.com/en/">Generate your map here, quick and easy!									Give your customers directions									Get found</a></small></div><div><small><a href="https://top10geeks.com/top-10-best-basketball-shoes-2016/">Top 10 basketball shoes</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:16,center:new google.maps.LatLng(1.2930681057899969,103.77687536771815),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(1.2930681057899969,103.77687536771815)});infowindow = new google.maps.InfoWindow({content:'<strong>Contact Us</strong><br>Singapore 119077<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+          </div>
+          <div class="col">
+            <div class="list card">
+
+              <a  class="item item-icon-left">
+                <i class="icon ion-home"></i>
+                NUS Singapore 123456
+              </a>
+
+              <a class="item item-icon-left">
+                <i class="icon ion-ios-telephone"></i>
+                98765432
+              </a>
+
+              <a  class="item item-icon-left">
+                <i class="icon ion-compose"></i>
+                delivery@gmail.com
+              </a>
+
+              <a   class="item item-icon-left">
+                <i class="icon ion-social-facebook"></i>
+                Delivery
+              </a>
+              
+              <a  class="item item-icon-left">
+                <i class="icon ion-social-twitter"></i>
+                TweetDelivery
+              </a>
+              
+        
+
+</div>
+          </div>
+        </div>
+    
+       
+         
+      </ion-content>
+    </ion-side-menu-content>
+
+
+  </ion-side-menus>
+
+ <div class="bar bar-footer bar-assertive">
+  <div class="title">Footer</div>
+</div>
+ 
+
+</body>
+</html>

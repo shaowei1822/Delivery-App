@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html ng-app="ionicApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="//code.angularjs.org/1.3.0-rc.1/angular-route.min.js"></script>
+    
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+ <body >
+ 
+
+
+    <!-- Center content -->
+
+      <ion-header-bar class="bar bar-header bar-assertive">
+        <div class="button-bar">
+          <a class="button" href="Blog.html">Blog</a>
+          <a class="button" href="contactus.html">Contact Us</a>
+          <a class="button" href="index.html">Home</a>
+          <a class="button" href="BeADriver.html">Be a Driver</a>
+          <a class="button" href="BookADelivery.html">Book A Delivery</a>
+        </div>
+      </ion-header-bar>
+      <ion-content ng-controller="blogController">
+        <div class="row responsive-sm">
+            <div class="col" ng-repeat="blogpost in blogposts">
+                <div class="list card">
+
+                    <div class="item item-avatar">
+                        <h2>{{blogpost.author}}</h2>
+                        <p>{{blogpost.date | date:'yyyy-MM-dd'}}</p>
+                    </div>
+
+                    <div class="item item-body">
+                        <img class="full-image" src={{blogpost.img}}>
+                        <p>
+                        {{blogpost.introduction}}
+                        </p>
+                        <p>
+                        <a class = "button button-assertive" href={{blogpost.bloglink}}>Read More</a>
+                        </p>
+                </div>
+
+                </div>
+           </div>
+           
+            
+        </div> 
+        
+       
+         
+      </ion-content>
+   
+
+  
+
+ <div class="bar bar-footer bar-assertive">
+  <div class="title">Footer</div>
+</div>
+ 
+
+</body>
+</html>
